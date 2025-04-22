@@ -1,0 +1,161 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Reset css - Very impotant, must do first */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 40px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #123a12;
+
+}
+
+body{
+    background: #3d663d;
+    background: linear-gradient(119deg, rgba(61, 102, 61, 1) 0%, rgba(66, 201, 123, 1) 100%);
+    min-height: 100vh;
+
+}
+
+.container{
+    max-width: 1200px;
+    /* can chinh tu dong */
+    margin: 0 auto;
+
+}
+
+.button{
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-color: aqua;
+    background: linear-gradient(119deg,rgba(0, 113, 158, 1) 0%, rgba(0, 117, 49, 1) 100%);
+    border: none;
+    outline: none;
+    display: flex;
+    gap: 10px;
+}
+
+.logo{
+    font-size: 50px;
+    font-weight: 600;
+    color:darkseagreen;
+}
+
+.logo > span{
+    background: #e09a28;
+    background: linear-gradient(119deg, rgba(224, 154, 40, 1) 0%, rgba(217, 80, 80, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-img{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-img > img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.content > h1 {
+    font-size: 40px;
+    font-weight: 10;
+}
+
+.content > h1 > span {
+    /* doi mau chu Yotsuba */
+    background: #e09a28;
+    background: linear-gradient(119deg, rgba(224, 154, 40, 1) 0%, rgba(217, 80, 80, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+/* pseudo classes - vi du: p:nth-of-type */
+.content > p:nth-of-type(1){
+    font-size: 30px;
+    color:#e09a28;
+}
+
+.content > p:nth-of-type(2){
+    font-size: 20px;
+    color: white;
+}
+
+.btn-wrapper{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-wrapper > .btn--read {
+    color: rgb(19, 39, 77);
+    padding: 12px 25px ;
+    background-color: transparent;
+    border-radius: 25px;
+    outline: none;
+    border: 1px rgb(19, 37, 26) solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-wrapper > .btn--start:hover{
+    /* hieu ung di chuyen button */
+    transform: translateY(-5px);
+    transition: all 0.25s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.btn-wrapper > .btn--read::before{
+    content: "";
+    position: absolute;
+    background-color: #123a12;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-wrapper > .btn--read:hover{
+    color: white;
+}
+
+.btn-wrapper > .btn--read:hover::before{
+    width: 100%;
+}
