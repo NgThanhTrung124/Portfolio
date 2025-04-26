@@ -6,13 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="particles-js"></div>
     <!-- ctrl + shift + P => wrap with -->
     <div class="container">
         <header>
-            <div class="logo">
-                <span>YOTSUBA-CON</span>
+            <div class="logo filter-name">YOTSUBA-CON
             </div>
             <nav>
                 <ul>
@@ -36,12 +39,15 @@
                     <span>Contact</span>
                     <i class="fa-solid fa-handshake"></i>
                 </button>
+                <div class="bar">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </header>
 
         <main>
             <div class="content">
-                <h1>Hello, i am <span>Yotsuba</span></h1>
+                <h1>Hello, i am <span class="filter-name">Yotsuba</span></h1>
                 <p>I'm full stack developer</p>
                 <p>Start guide for beginner</p>
                 
@@ -49,7 +55,7 @@
                     <button class="btn--start button">Let's start
                         <i class="fa-solid fa-headphones"></i>
                     </button>
-                    <button class="btn--read ">More
+                    <button class="btn--read button">Read more
                         <i class="fa-solid fa-book"></i>
                     </button>
                 </div>
@@ -57,9 +63,13 @@
             <div class="box-img">
                 <img src="./images/3d1636864cc321109dbc416e3848a3b9-removebg-preview.png" alt="">
             </div>
+        
         </main>
 
     </div>
 
+    <!-- CDN-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
